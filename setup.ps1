@@ -1,12 +1,8 @@
-# TODO: make sure winget is installed!
+# install Windows Update PowerShell Module
+Install-Module -Name PSWindowsUpdate
 
-# TODO: install drivers?
-
-# TODO: install windows updates?
-
-# TODO: install windows features?
-
-# TODO: windows settings?
+# install windows updates
+Get-WindowsUpdate -Install -AcceptAll -IgnoreReboot
 
 # install packages via winget
 $packages = @(
@@ -39,3 +35,13 @@ foreach ($package in $packages) {
         Write-Output $package failed to install. %ERRORLEVEL%
     }
 }
+
+# TODO: make sure winget is installed!
+
+# TODO: install drivers?
+
+# TODO: install windows updates?
+
+# TODO: windows settings?
+
+# TODO: install windows features?
