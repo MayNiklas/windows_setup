@@ -10,10 +10,26 @@
 
 # install packages via winget
 $packages = @(
-    "Microsoft.WindowsTerminal",
+    # hardware
+    "Elgato.StreamDeck",
+    "Elgato.WaveLink",
     "Nvidia.GeForceExperience",
-    "Microsoft.VisualStudioCode"
+
+    # development
+    "Microsoft.WindowsTerminal",
+    "Microsoft.VisualStudioCode",
+
+    # communication
+    "Discord.Discord",
+    "OpenWhisperSystems.Signal",
+    "TeamSpeakSystems.TeamSpeakClient",
+    "Telegram.TelegramDesktop",
+
+    # game launchers
+    "Valve.Steam",
+    "RiotGames.Valorant.EU"
 )
+
 foreach ($package in $packages) {
     winget install -e -id $package
     if (%ERRORLEVEL% EQU 0) {
