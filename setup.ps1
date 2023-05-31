@@ -4,6 +4,9 @@ $packages = @(
     "Elgato.StreamDeck",
     "Elgato.WaveLink",
     "Nvidia.GeForceExperience",
+    
+    # utils
+    "Mozilla.Firefox",
 
     # development
     "Microsoft.WindowsTerminal",
