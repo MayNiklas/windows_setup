@@ -1,9 +1,3 @@
-# install Windows Update PowerShell Module
-Install-Module -Name PSWindowsUpdate
-
-# install windows updates
-Get-WindowsUpdate -Install -AcceptAll -IgnoreReboot
-
 # install packages via winget
 $packages = @(
     # hardware
