@@ -22,6 +22,7 @@ $packages = @(
 
 foreach ($package in $packages) {
     winget install -e $package
+    # TODO: ERRORLEVEL does not work - needs to get fixed
     if (%ERRORLEVEL% EQU 0) {
         Write-Output $package installed successfully. 
     }
@@ -39,3 +40,5 @@ foreach ($package in $packages) {
 # TODO: windows settings?
 
 # TODO: install windows features?
+
+# TODO: 
