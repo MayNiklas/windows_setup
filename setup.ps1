@@ -27,7 +27,7 @@ $packages = @(
 )
 
 foreach ($package in $packages) {
-    winget install -e -id $package
+    winget install -e $package
     if (%ERRORLEVEL% EQU 0) {
         Write-Output $package installed successfully. 
     }
