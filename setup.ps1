@@ -41,4 +41,7 @@ foreach ($package in $packages) {
 
 # TODO: install windows features?
 
-# TODO: 
+# TODO: install server management tools
+# Get status: Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
+# Install all: Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability –Online
+Add-WindowsCapability -Online -Name Rsat.ServerManager.Tools
