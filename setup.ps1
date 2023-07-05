@@ -1,3 +1,5 @@
+# TODO: make sure winget is installed!
+
 # install packages via winget
 $packages = @(
     # hardware
@@ -33,19 +35,12 @@ $packages = @(
 )
 
 foreach ($package in $packages) {
-    winget install -e $package
-    # TODO: ERRORLEVEL does not work - needs to get fixed
-    if (%ERRORLEVEL% EQU 0) {
-        Write-Output $package installed successfully. 
-    }
-    else {
-        Write-Output $package failed to install. %ERRORLEVEL%
-    }
+    winget install $package
 }
 
-# TODO: make sure winget is installed!
-
 # TODO: install drivers?
+
+# TODO: uninstall bloatware?
 
 # TODO: install windows updates?
 
