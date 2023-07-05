@@ -7,6 +7,15 @@ $packages = @(
     
     # utils
     "Mozilla.Firefox",
+    "Spotify.Spotify",
+    "VideoLAN.VLC",
+    "Yubico.Authenticator",
+
+    # office
+    "Microsoft.Office",
+    "Synology.DriveClient",
+    "Synology.ActiveBackupForBusinessAgent",
+    "Zoom.Zoom",
 
     # development
     "Microsoft.WindowsTerminal",
