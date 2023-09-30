@@ -7,3 +7,6 @@
 .\tasks\winget\nvidia.ps1
 .\tasks\winget\utils.ps1
 .\tasks\winget\development.ps1
+
+# configure vscode
+.\tasks\vscode.ps1
