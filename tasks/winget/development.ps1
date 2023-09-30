@@ -1,5 +1,4 @@
 foreach ($package in @(
-        "Canonical.Ubuntu.2204",
         "Git.Git",
         "GitHub.GitHubDesktop",
         "Microsoft.VisualStudioCode",
