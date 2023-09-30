@@ -5,6 +5,7 @@ foreach ($package in @(
         "Microsoft.Office",
         "Mozilla.Firefox",
         "Synology.DriveClient",
-        "WhatsApp.WhatsApp",
+        # WhatsApp
+        "9NKSQGP7F2NH",
         "Zoom.Zoom"
     ) ) { winget install $package }

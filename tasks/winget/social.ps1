@@ -4,6 +4,7 @@ foreach ($package in @(
         "TeamSpeakSystems.TeamSpeakClient",
         "TeamSpeakSystems.TeamSpeakClient",
         "Telegram.TelegramDesktop",
-        "WhatsApp.WhatsApp",
+        # WhatsApp
+        "9NKSQGP7F2NH",
         "Zoom.Zoom"
     ) ) { winget install $package }
