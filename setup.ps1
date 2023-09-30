@@ -1,55 +1,58 @@
 # TODO: make sure winget is installed!
+# TODO: split this into seperate files / roles
 
-# install packages via winget
-$packages = @(
-    # hardware
-    "Elgato.StreamDeck",
-    "Elgato.WaveLink",
-    "Nvidia.GeForceExperience",
-    "Samsung.SamsungMagician",
-    "REALiX.HWiNFO",
-    
-    # utils
-    "AgileBits.1Password",
-    "Mozilla.Firefox",
-    "OBSProject.OBSStudio",
-    "Rufus.Rufus",
-    "Spotify.Spotify",
-    "TeXstudio.TeXstudio",
-    "VideoLAN.VLC",
-    "Yubico.Authenticator",
+# install packages I want to install on my work computer
+foreach ($package in @(
+        "Microsoft.Office",
+        "Synology.DriveClient",
+        "WhatsApp.WhatsApp",
+        "Zoom.Zoom"
+    ) ) { winget install $package }
 
-    # office
-    "Microsoft.Office",
-    "Synology.DriveClient",
-    "Synology.ActiveBackupForBusinessAgent",
-    "Zoom.Zoom",
+# install packages I only want to install on my desktop
+foreach ($package in @(
+        "Elgato.StreamDeck",
+        "Elgato.WaveLink",
+        "Nvidia.GeForceExperience"
+    ) ) { winget install $package }
 
-    # development
-    "Git.Git",
-    "GitHub.GitHubDesktop",
-    "Microsoft.VisualStudioCode",
-    "Microsoft.WindowsTerminal",
+# install utils
+foreach ($package in @(
+        "AgileBits.1Password",
+        "Mozilla.Firefox",
+        "OBSProject.OBSStudio",
+        "Rufus.Rufus",
+        "Spotify.Spotify",
+        "REALiX.HWiNFO",
+        "Yubico.Authenticator"
+    )  ) { winget install $package }
 
-    # WSL
-    "Canonical.Ubuntu.2204",
+# install communication tools
+foreach ($package in @(
+        "Discord.Discord",
+        "OpenWhisperSystems.Signal",
+        "TeamSpeakSystems.TeamSpeakClient",
+        "Telegram.TelegramDesktop",
+        "WhatsApp.WhatsApp",
+        "Zoom.Zoom"
+    ) ) { winget install $package }
 
-    # communication
-    "Discord.Discord",
-    "OpenWhisperSystems.Signal",
-    "TeamSpeakSystems.TeamSpeakClient",
-    "Telegram.TelegramDesktop",
-    "Zoom.Zoom",
+# install gaming related packages
+foreach ($package in @(
+        "ElectronicArts.EADesktop",
+        "RiotGames.Valorant.EU",
+        "Valve.Steam"
+    ) ) { winget install $package }
 
-    # game launchers
-    "ElectronicArts.EADesktop",
-    "Valve.Steam",
-    "RiotGames.Valorant.EU"
-)
-
-foreach ($package in $packages) {
-    winget install $package
-}
+# install development tools
+foreach ($package in @(
+        "Canonical.Ubuntu.2204",
+        "Git.Git",
+        "GitHub.GitHubDesktop",
+        "Microsoft.VisualStudioCode",
+        "Microsoft.WindowsTerminal",
+        "TeXstudio.TeXstudio"
+    ) ) { winget install $package }
 
 # TODO: install drivers?
 
@@ -64,5 +67,5 @@ foreach ($package in $packages) {
 # TODO: install server management tools
 # Get status: Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
 # Install all: Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability –Online
-Add-WindowsCapability -Online -Name Rsat.ServerManager.Tools
-Add-WindowsCapability -Online -Name Rsat.GroupPolicy.Management.Tools
+# Add-WindowsCapability -Online -Name Rsat.ServerManager.Tools
+# Add-WindowsCapability -Online -Name Rsat.GroupPolicy.Management.Tools
