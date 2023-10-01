@@ -2,6 +2,7 @@
 
 # winget
 foreach ($package in @(
+        "Adobe.Acrobat.Reader.64-bit",
         # Lenovo Comercial Vantage
         "9NR5B8GVVM13",
         "Microsoft.Office",
