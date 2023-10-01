@@ -2,6 +2,8 @@
 
 # winget
 foreach ($package in @(
+        # Lenovo Comercial Vantage
+        "9NR5B8GVVM13",
         "Microsoft.Office",
         "Mozilla.Firefox",
         "Synology.DriveClient",
@@ -10,5 +12,5 @@ foreach ($package in @(
         "Zoom.Zoom"
     ) ) { winget install $package }
 
-# load letsencrypt root certificate
+# load letsencrypt root certificate into the trusted root store
 start microsoft-edge:https://valid-isrgrootx1.letsencrypt.org/
