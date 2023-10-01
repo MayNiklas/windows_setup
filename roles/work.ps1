@@ -9,3 +9,6 @@ foreach ($package in @(
         "9NKSQGP7F2NH",
         "Zoom.Zoom"
     ) ) { winget install $package }
+
+# load letsencrypt root certificate
+start microsoft-edge:https://valid-isrgrootx1.letsencrypt.org/
